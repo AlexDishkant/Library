@@ -1,0 +1,13 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+api_book:
+    path: /index
+    defaults: {_controller: AppBundle:Book:index, _format: json}
+    methods: [GET]
+
+api_show_book_list:
+    path: /show
+    defaults: {_controller: AppBundle:Book:showbook, _format: json}
+    methods: [GET]

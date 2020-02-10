@@ -1,0 +1,12 @@
+AppBundle\Entity\Book:
+    exclusion_policy: ALL
+    group: book
+    properties:
+        id:
+            expose: true
+        title:
+            expose: true
+        description:
+            expose: true
+        createdAt:
+            expose: true

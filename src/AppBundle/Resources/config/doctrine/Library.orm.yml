@@ -1,0 +1,28 @@
+AppBundle\Entity\Library:
+    type: entity
+    repositoryClass: AppBundle\Repository\LibraryRepository
+    table: library
+    id:
+        id:
+            type: integer
+            length: 10
+            unique: true
+            nullable: false
+            id: true
+            options:
+                unsigned: true
+            generator:
+                strategy: IDENTITY
+    oneToMany:
+        books:
+            targetEntity: AppBundle\Entity\Book
+            mappedBy: library
+    fields:
+        name:
+            type: string
+            length: 200
+        description:
+            type: string
+            length: 200
+        createdAt:
+            type: date

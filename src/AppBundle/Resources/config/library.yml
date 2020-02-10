@@ -1,0 +1,29 @@
+api_index_action_list:
+    path: /index
+    defaults: {_controller: AppBundle:Library:index, _format: json}
+    methods: [GET]
+
+api_create_fields_list:
+    path: /create
+    defaults: {_controller: AppBundle:Library:create, _format: json}
+    methods: [POST]
+
+api_library_add_books_list:
+    path: /addbook
+    defaults: {_controller: AppBundle:Library:addBook, _format: json}
+    methods: [POST]
+
+pi_library_remove_books_list:
+    path: /removebook
+    defaults: {_controller: AppBundle:Library:removeBook, _format: json}
+    methods: [POST]
+
+api_show_fields_list:
+    path: /show
+    defaults: {_controller: AppBundle:Library:show, _format: json}
+    methods: [GET]
+
+api_delete_login:
+    path: /delete
+    defaults: {_controller: AppBundle:Library:delete, _format: json}
+    methods: [POST]

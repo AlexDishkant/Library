@@ -1,0 +1,42 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+api_v1_library:
+    prefix: api/v1/library
+    resource: '@AppBundle/Resources/config/library.yml'
+
+api_v1_books:
+    prefix: api/v1/books
+    resource: '@AppBundle/Resources/config/book.yml'
+
+api_defaults_test_route:
+    path: /defaults
+    defaults: { _controller: AppBundle:Default:index, _format: viev }
+
+api_whm_homepage_route:
+    path: /homepage
+    defaults: { _controller: AppBundle:Default:index, _format: viev }
+
+api_lucky_controller_route:
+    path: /lucky
+    defaults: { _controller: AppBundle:Lucky:number, _format: viev }
+
+app.swagger_ui:
+    path: /api/doc
+    methods: GET
+    defaults: { _controller: nelmio_api_doc.controller.swagger_ui }
+
+app.swagger:
+    path: /api/doc.json
+    methods: GET
+    defaults: { _controller: nelmio_api_doc.controller.swagger }
+
+
+
+
+
+
+
+
+

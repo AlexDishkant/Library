@@ -1,0 +1,33 @@
+AppBundle\Entity\Book:
+    type: entity
+    repositoryClass: AppBundle\Repository\BookRepository
+    table: book
+    id:
+        id:
+            type: integer
+            length: 10
+            unique: true
+            nullable: false
+            id: true
+            options:
+                unsigned: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        library:
+            targetEntity: AppBundle\Entity\Library
+            mappedBy: library
+            joinColumn:
+                name: library_id
+                nullable: true
+                referencedColumnName: id
+                onDelete: CASCADE
+    fields:
+        title:
+            type: string
+            length: 200
+        description:
+            type: string
+            length: 200
+        createdAt:
+            type: date
